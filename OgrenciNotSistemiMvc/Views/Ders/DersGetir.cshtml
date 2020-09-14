@@ -1,0 +1,19 @@
+﻿@model OgrenciNotSistemiMvc.Models.EntityFramework.tblDersler
+@{
+    ViewBag.Title = "DersGetir";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Seçmiş Olduğunuz Dersin İsmini Güncelleyebilirsiniz.</h2>
+
+@using (Html.BeginForm("Guncelle", "Ders", FormMethod.Post))
+{
+    <div class="form-group">
+        @Html.LabelFor(m => m.DersAd)
+        @Html.TextBoxFor(m => m.DersAd, new { @class = "form-control" })
+    </div>
+    @Html.HiddenFor(m => m.DersId)
+<div style="margin-top: 15px">
+    <button class="btn btn-warning">Güncelle</button>
+</div>
+    }

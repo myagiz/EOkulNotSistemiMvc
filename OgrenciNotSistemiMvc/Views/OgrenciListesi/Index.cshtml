@@ -1,0 +1,40 @@
+﻿@using OgrenciNotSistemiMvc.Models.EntityFramework
+@model List<tblOgrenciler>
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h1>Öğrenci Listesi</h1>
+
+<table class="table table-bordered">
+    <thead class="thead-dark">
+    <tr>
+        <th width="10%" scope="col">ÖĞRENCİ ID</th>
+        <th width="20%" scope="col">ÖĞRENCİ ADI</th>
+        <th width="20%" scope="col">ÖĞRENCİ SOYADI</th>
+        @*<th width="15%" scope="col">ÖĞRENCİ OKUL NUMARASI</th>*@
+        <th width="10%" scope="col">ÖĞRENCİ CİNSİYET</th>
+        <th width="15%" scope="col">ÖĞRENCİ FOTOGRAF</th>
+        <th width="5%" scope="col">SİL</th>
+        <th width="10%" scope="col">GÜNCELLE</th>
+    </tr>
+    </thead>
+    <tbody>
+    @foreach (var ogrlst in Model)
+    {
+        <tr>
+            <td>@ogrlst.OgrenciId</td>
+            <td>@ogrlst.OgrenciAd</td>
+            <td>@ogrlst.OgrenciSoyad</td>
+            @*<td>@ogrlst.OgrenciOkulNo</td>*@
+            <td>@ogrlst.OgrenciCinsiyet</td>
+            <td>@ogrlst.OgrenciFotograf</td>
+            <td>@Html.ActionLink("Sil", "Sil", new { id = ogrlst.OgrenciId }, new { @class = "btn btn-danger", onclick = "return confirm('Öğrenci Kayıdı Silmek İstediğinize Emin Misiniz?')" })</td>
+            <td><a href="/OgrenciListesiGetir/@ogrlst.OgrenciId" class="btn btn-success">Güncelle</a></td>
+        </tr>
+    }
+    </tbody>
+
+</table>
+<a href="YeniOgrenciEkle" class="btn btn-warning">Yeni Öğrenci Eklemek İçin Tıklayınız</a>

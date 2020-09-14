@@ -1,0 +1,43 @@
+﻿@model OgrenciNotSistemiMvc.Models.EntityFramework.tblOgrenciler
+
+@{
+    ViewBag.Title = "YeniOgrenciEkle";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Yeni Öğrenci Eklemek İçin Formu Doldurunuz</h2>
+<form method="post" class="form form-group">
+    <div>
+        <label>Öğrenci Adı</label>
+        <input type="text" class="form form-control" name="OgrenciAd" />
+    </div>
+    <div>
+        <div style="margin-top: 10px"></div>
+        <label>Öğrenci Soyadı</label>
+        <input type="text" class="form form-control" name="OgrenciSoyad" />
+    </div>
+    <div>
+        <div style="margin-top: 10px"></div>
+        <label>Öğrenci Okul Numarası</label>
+        <input type="text" class="form form-control" name="OgrenciOkulNo" />
+    </div>
+    <div>
+        <div style="margin-top: 10px"></div>
+        <label>Öğrenci Cinsiyet</label>
+        <input type="text" class="form form-control" name="OgrenciCinsiyet" />
+    </div>
+    @*<div>
+        <div style="margin-top: 10px"></div>
+        <label>Öğrenci Kulüp</label>
+       @Html.DropDownListFor(m =>m.tblKulupler.KulupId,(List<SelectListItem>)ViewBag.dgr, new{@class="form-control"} )
+    </div>*@
+    <div>
+        <div style="margin-top: 10px"></div>
+        <label>Öğrenci Fotoğraf</label>
+        <input type="text" class="form form-control" name="OgrenciFotograf" />
+    </div>
+    <div style="margin-top: 10px"></div>
+    <button class="btn btn-warning">Yeni Öğrenci Ekle</button>
+
+
+</form>

@@ -1,0 +1,20 @@
+﻿@using OgrenciNotSistemiMvc.Models.EntityFramework
+
+@{
+    ViewBag.Title = "YeniDersEkle";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Yeni Ders Eklemek İçin Formu Doldurunuz</h2>
+
+<form method="post" class="form form-group">
+    <div>
+        <label>Ders Adı</label>
+        <input type="text" class="form form-control" name="DersAd"/>
+        
+    </div>
+    <div style="margin-top: 15px">
+        <button class="btn btn-warning">Yeni Ders Ekle !</button>
+    </div>
+</form>
+

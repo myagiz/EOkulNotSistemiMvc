@@ -1,0 +1,33 @@
+﻿@using OgrenciNotSistemiMvc.Models.EntityFramework
+@model List<tblDersler>
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h1 align="left">DERSLER</h1>
+
+<table class="table table-bordered">
+    <thead class="thead-dark">
+        <tr>
+            <th width="5%" scope="col">DERS ID</th>
+            <th width="85%" scope="col">DERS ADI</th>
+            <th width="5%" scope="col">Sil</th>
+            <th width="15%" scope="col">Güncelle</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var drs in Model)
+        {
+            <tr>
+                <td>@drs.DersId</td>
+                <td>@drs.DersAd</td>
+                <td>@Html.ActionLink("Sil", "Sil", new { id = drs.DersId }, new { @class = "btn btn-danger", onclick = "return confirm('Ders Kayıdı Silmek İstediğinize Emin Misiniz?')" })</td> 
+                @*<td><a href="ders/sil/@drs.DersId" class="btn btn-danger">Sil</a></td>*@
+                <td><a href="dersgetir/@drs.DersId" class="btn btn-success">Güncelle</a></td>
+
+            </tr>
+        }
+    </tbody>
+</table>
+<a href="/ders/yenidersekle/" class="btn btn-warning">Yeni Ders Eklemek İçin Tıklayınız</a>

@@ -1,0 +1,22 @@
+﻿
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Not Değerlerinizi Aşağıdan Hesaplayabilirsiniz</h2>
+
+<form class="form form-group" method="post">
+
+    <div style="margin-top: 30px">
+        SINAV - 1 : <input type="text" name="sayi1" id="sayi1" class="form form-control-sm" />
+        <div style="margin-top: 10px"></div>
+        SINAV - 2 : <input type="text" name="sayi2" id="sayi2" class="form form-control-sm" />
+        <div style="margin-top: 10px"></div>
+        SINAV - 3 : <input type="text" name="sayi3" id="sayi3" class="form form-control-sm" />
+        <div style="margin-top: 20px"></div>
+        <button class="btn btn-warning">Not Hesapla</button><br /><br/>
+        <b>SONUÇ :</b>  @ViewBag.snc
+    </div>
+
+</form>

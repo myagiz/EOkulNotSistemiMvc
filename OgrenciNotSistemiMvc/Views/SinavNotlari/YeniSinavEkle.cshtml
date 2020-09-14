@@ -1,0 +1,53 @@
+﻿
+@{
+    ViewBag.Title = "YeniSinavEkle";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Sınav Notlarını Eklemek İçin Gerekli Alanları Doldurunuz</h2>
+
+<form method="post" class="form form-group">
+    <div>
+        <label>Öğrenci Id</label>
+        <input type="text" class="form form-control" name="OgrenciId" />
+    </div>
+    <div>
+        <div style="margin-top: 10px"></div>
+        <label>Ders Adı</label>
+        <input type="text" class="form form-control" name="DersAd" />
+    </div>
+    <div>
+        <div style="margin-top: 10px"></div>
+        <label>Sınav - 1</label>
+        <input type="text" class="form form-control" name="Sinav1" />
+    </div>
+    <div>
+        <div style="margin-top: 10px"></div>
+        <label>Sınav - 2</label>
+        <input type="text" class="form form-control" name="Sinav2"/>
+    </div>
+    <div>
+        <div style="margin-top: 10px"></div>
+        <label>Sınav - 3</label>
+        <input type="text" class="form form-control" name="Sinav3" />
+    </div>
+    <div>
+        <div style="margin-top: 10px"></div>
+        <label>Proje Notu</label>
+        <input type="text" class="form form-control" name="Proje" />
+    </div>
+    <div>
+        <div style="margin-top: 10px"></div>
+        <label>Ortalama</label>
+        <input type="text" class="form form-control" name="Ortalama" />
+    </div>
+    <div>
+        <div style="margin-top: 10px"></div>
+        <label>Durum</label>
+        <input type="text" class="form form-control" name="Durum" />
+    </div>
+
+    <div style="margin-top: 10px"></div>
+    <button class="btn btn-warning">Sınav Notu Ekle</button>
+
+</form>

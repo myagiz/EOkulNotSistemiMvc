@@ -1,0 +1,60 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="MvcOkulModelStoreContainer" CdmEntityContainer="MvcOkulEntities1">
+    <EntitySetMapping Name="sysdiagrams">
+      <EntityTypeMapping TypeName="MvcOkulModel.sysdiagrams">
+        <MappingFragment StoreEntitySet="sysdiagrams">
+          <ScalarProperty Name="name" ColumnName="name" />
+          <ScalarProperty Name="principal_id" ColumnName="principal_id" />
+          <ScalarProperty Name="diagram_id" ColumnName="diagram_id" />
+          <ScalarProperty Name="version" ColumnName="version" />
+          <ScalarProperty Name="definition" ColumnName="definition" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tblDersler">
+      <EntityTypeMapping TypeName="MvcOkulModel.tblDersler">
+        <MappingFragment StoreEntitySet="tblDersler">
+          <ScalarProperty Name="DersId" ColumnName="DersId" />
+          <ScalarProperty Name="DersAd" ColumnName="DersAd" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tblKulupler">
+      <EntityTypeMapping TypeName="MvcOkulModel.tblKulupler">
+        <MappingFragment StoreEntitySet="tblKulupler">
+          <ScalarProperty Name="KulupId" ColumnName="KulupId" />
+          <ScalarProperty Name="KulupAd" ColumnName="KulupAd" />
+          <ScalarProperty Name="KulupKontenjan" ColumnName="KulupKontenjan" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tblNotlar">
+      <EntityTypeMapping TypeName="MvcOkulModel.tblNotlar">
+        <MappingFragment StoreEntitySet="tblNotlar">
+          <ScalarProperty Name="NotId" ColumnName="NotId" />
+          <ScalarProperty Name="DersId" ColumnName="DersId" />
+          <ScalarProperty Name="OgrenciId" ColumnName="OgrenciId" />
+          <ScalarProperty Name="Sinav1" ColumnName="Sinav1" />
+          <ScalarProperty Name="Sinav2" ColumnName="Sinav2" />
+          <ScalarProperty Name="Sinav3" ColumnName="Sinav3" />
+          <ScalarProperty Name="Proje" ColumnName="Proje" />
+          <ScalarProperty Name="Ortalama" ColumnName="Ortalama" />
+          <ScalarProperty Name="Durum" ColumnName="Durum" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tblOgrenciler">
+      <EntityTypeMapping TypeName="MvcOkulModel.tblOgrenciler">
+        <MappingFragment StoreEntitySet="tblOgrenciler">
+          <ScalarProperty Name="OgrenciId" ColumnName="OgrenciId" />
+          <ScalarProperty Name="OgrenciAd" ColumnName="OgrenciAd" />
+          <ScalarProperty Name="OgrenciSoyad" ColumnName="OgrenciSoyad" />
+          <ScalarProperty Name="OgrenciFotograf" ColumnName="OgrenciFotograf" />
+          <ScalarProperty Name="OgrenciCinsiyet" ColumnName="OgrenciCinsiyet" />
+          <ScalarProperty Name="OgrenciKulup" ColumnName="OgrenciKulup" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>
